@@ -1,7 +1,29 @@
 ﻿function Add-WPFListBoxItem
 {
 <#
-
+	.SYNOPSIS
+		Function to add items from a Listbox
+	
+	.DESCRIPTION
+		Function to add items from a Listbox.
+	
+		System.windows.controls.listbox	
+		https://msdn.microsoft.com/en-us/library/system.windows.controls.listbox(v=vs.110).aspx
+	
+	.PARAMETER ListBox
+		Specifies the Listbox control
+	
+	.PARAMETER Items
+		Specifies the items to add in the Listbox
+	
+	.PARAMETER Append
+		Specifies that the Listbox
+		
+	.NOTES
+		Francois-Xavier Cat
+		lazywinadmin.com
+		@lazywinadm
+		github.com/lazywinadmin
 #>
 	Param (
 		[ValidateNotNull()]
@@ -11,9 +33,9 @@
 		
 		[ValidateNotNull()]
 		[Parameter(Mandatory = $true)]
-		$Items,
+		$Item #,
 		
-		[Switch]$Append
+		#[Switch]$Append=$true
 		
 	)
 	BEGIN
@@ -22,16 +44,18 @@
 	}
 	PROCESS
 	{
+		<#
 		IF (-not $PSBoundParameters['Append'])
 		{
 			# Clear ListBox
 			$ListBox.items.Clear()
 		}
+		#>
 		
 		# Add Items
-		FOREACH ($item in $Items)
+		FOREACH ($i in $Item)
 		{
-			$ListBox.Items.Add($item)
+			$ListBox.Items.Add($i)
 		}
-	} #PROCESS
+	}
 }
