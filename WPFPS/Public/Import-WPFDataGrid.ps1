@@ -7,6 +7,10 @@
 	.DESCRIPTION
 		Use this function to dynamically load items into the DataGrid control.
 
+        The object passed to the the Item parameter will be converted to a DataTable Object
+
+        The object added into the DataGrid will be a DataView
+
 	.PARAMETER  DataGrid
 		The ComboBox control you want to add items to.
 
@@ -20,7 +24,10 @@
 		Import-WFDataGrid -DataGrid $DataGrid1 -Item (Get-Process)
 	
 	.NOTES
-
+        Francois-Xavier Cat
+		www.lazywinadmin.com
+		@lazywinadm
+		github.com/lazywinadmin
 		
 	#>
 	
@@ -41,6 +48,12 @@
 	}
 	PROCESS
 	{
-		$DataGrid.ItemsSource = $Item
+        if ($item -isnot [System.Data.DataTable])
+        {
+		    $Item = $Item |Out-DataTable
+        }
+
+        $DataTableView = New-Object System.Data.DataView -ArgumentList $Item
+        $DataGrid.ItemsSource = $DataTableView
 	}
 }

@@ -39,7 +39,7 @@ function Clear-WPFDataGrid
 		IF ($PSCmdlet.ShouldProcess($DataGrid, "Clear the Richtextbox control"))
 		{
 			#Clear the RichTextBox
-			$DataGrid.Items.Clear()
+			$DataGrid.ItemsSource = $null
 		}
 	}
 }
