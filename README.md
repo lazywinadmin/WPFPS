@@ -4,6 +4,8 @@ The WPFPS powershell module allows you to interact with Windows Presentation Fou
 
 If you are among those creating complexe/advanced PowerShell Graphical User Interface, you will realize the need for functions to interact with the different Controls.
 
+![alt text](https://raw.githubusercontent.com/lazywinadmin/WPFPS/master/Examples/WPFDataGrid02/WPFDataGrid02.jpg "DataGrid Example")
+
 If your need is only to create simple GUI, without too many controls you might want to take a look at [ShowUI](https://showui.codeplex.com/).
 
 ## Installation
