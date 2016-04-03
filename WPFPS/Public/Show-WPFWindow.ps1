@@ -1,17 +1,17 @@
-﻿function Show-WPFForm
+﻿function Show-WPFWindow
 {
 <#
 	.SYNOPSIS
-		Function to show the Form
+		Function to show the Window
 	
 	.DESCRIPTION
-		Function to show the Form
+		Function to show the Window
 	
-	.PARAMETER Form
-		Specifies the Form to Show
+	.PARAMETER Window
+		Specifies the Window to Show
 	
 	.EXAMPLE
-		PS C:\> Show-WPFForm -Form $Window
+		PS C:\> Show-WPFWindow -Window $Window
 	
 	.NOTES
 		Francois-Xavier Cat
@@ -25,9 +25,9 @@
 	[CmdletBinding()]
 	PARAM (
 		[Parameter(Mandatory)]
-		[Alias("Window")]
+		[Alias("Form")]
 		[System.Windows.Window]
-		$Form)
+		$Window)
 	BEGIN
 	{
 		Add-Type –assemblyName PresentationFramework
@@ -36,6 +36,6 @@
 	}
 	PROCESS
 	{
-		$Form.ShowDialog() | out-null
+		$Window.ShowDialog() | out-null
 	}
 }

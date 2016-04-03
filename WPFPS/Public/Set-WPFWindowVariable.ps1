@@ -1,4 +1,4 @@
-﻿Function Set-WPFFormVariable
+﻿Function Set-WPFWindowVariable
 {
 <#
 	.SYNOPSIS
@@ -7,8 +7,8 @@
 	.DESCRIPTION
 		Function to generate the Control Variables
 	
-	.PARAMETER Form
-		Specifies the Form
+	.PARAMETER Window
+		Specifies the Window
 	
 	.PARAMETER XAML
 		Specifies the XAML used
@@ -17,7 +17,7 @@
 		Specifies the Prefix of each Variable, default is WPF
 	
 	.EXAMPLE
-		PS C:\> Set-WPFFormVariable -Form $Window -XAML $XAML -Prefix 'WPF'
+		PS C:\> Set-WPFWindowVariable -Window $Window -XAML $XAML -Prefix 'WPF'
 	
 	.NOTES
 		Francois-Xavier Cat
@@ -28,8 +28,9 @@
 	[CmdletBinding()]
 	PARAM (
 		[parameter(Mandatory)]
-		[alias("Window")]
-		$Form,
+		[alias("Form")]
+		[System.Windows.Window]
+		$Window,
 		
 		[parameter(Mandatory)]
 		[XML]$XAML,
@@ -38,6 +39,11 @@
 	
 	BEGIN
 	{
+		Add-Type –assemblyName PresentationFramework
+		Add-Type –assemblyName PresentationCore
+		Add-Type –assemblyName WindowsBase
+		
+		# Retrieve the Control in the XAML
 		$GUI = $XAML.SelectNodes("//*[@Name]")
 	}
 	PROCESS
@@ -46,14 +52,14 @@
 		{
 			Foreach ($item in $GUI)
 			{
-				Set-Variable -Name "$Prefix$($item.Name)" -Value $Form.FindName($item.Name) -Scope global
+				Set-Variable -Name "$Prefix$($item.Name)" -Value $Window.FindName($item.Name) -Scope global
 			}
 		}
 		ELSE
 		{
 			Foreach ($item in $GUI)
 			{
-				Set-Variable -Name "($item.Name)" -Value $Form.FindName($item.Name) -Scope global
+				Set-Variable -Name "($item.Name)" -Value $Window.FindName($item.Name) -Scope global
 			}
 		}
 	} #Process
