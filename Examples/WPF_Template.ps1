@@ -24,7 +24,7 @@ FUNCTIONS
 
 ####>
 
-Function Set-WPFFormVariable
+Function Set-WPFWindowVariable
 {
 <#
 	.SYNOPSIS
@@ -33,8 +33,8 @@ Function Set-WPFFormVariable
 	.DESCRIPTION
 		Function to generate the Control Variables
 	
-	.PARAMETER Form
-		Specifies the Form
+	.PARAMETER Window
+		Specifies the Window
 	
 	.PARAMETER XAML
 		Specifies the XAML used
@@ -43,7 +43,7 @@ Function Set-WPFFormVariable
 		Specifies the Prefix of each Variable, default is WPF
 	
 	.EXAMPLE
-		PS C:\> Set-WPFFormVariable -Form $Window -XAML $XAML -Prefix 'WPF'
+		PS C:\> Set-WPFWindowVariable -Window $Window -XAML $XAML -Prefix 'WPF'
 	
 	.NOTES
 		Francois-Xavier Cat
@@ -54,8 +54,9 @@ Function Set-WPFFormVariable
 	[CmdletBinding()]
 	PARAM (
 		[parameter(Mandatory)]
-		[alias("Window")]
-		$Form,
+		[alias("Form")]
+		[System.Windows.Window]
+		$Window,
 		
 		[parameter(Mandatory)]
 		[XML]$XAML,
@@ -64,6 +65,11 @@ Function Set-WPFFormVariable
 	
 	BEGIN
 	{
+		Add-Type –assemblyName PresentationFramework
+		Add-Type –assemblyName PresentationCore
+		Add-Type –assemblyName WindowsBase
+		
+		# Retrieve the Control in the XAML
 		$GUI = $XAML.SelectNodes("//*[@Name]")
 	}
 	PROCESS
@@ -72,33 +78,33 @@ Function Set-WPFFormVariable
 		{
 			Foreach ($item in $GUI)
 			{
-				Set-Variable -Name "$Prefix$($item.Name)" -Value $Form.FindName($item.Name) -Scope global
+				Set-Variable -Name "$Prefix$($item.Name)" -Value $Window.FindName($item.Name) -Scope global
 			}
 		}
 		ELSE
 		{
 			Foreach ($item in $GUI)
 			{
-				Set-Variable -Name "($item.Name)" -Value $Form.FindName($item.Name) -Scope global
+				Set-Variable -Name "($item.Name)" -Value $Window.FindName($item.Name) -Scope global
 			}
 		}
 	} #Process
 }
 
-function Show-WPFForm
+function Show-WPFWindow
 {
 <#
 	.SYNOPSIS
-		Function to show the Form
+		Function to show the Window
 	
 	.DESCRIPTION
-		Function to show the Form
+		Function to show the Window
 	
-	.PARAMETER Form
-		Specifies the Form to Show
+	.PARAMETER Window
+		Specifies the Window to Show
 	
 	.EXAMPLE
-		PS C:\> Show-WPFForm -Form $Window
+		PS C:\> Show-WPFWindow -Window $Window
 	
 	.NOTES
 		Francois-Xavier Cat
@@ -112,9 +118,9 @@ function Show-WPFForm
 	[CmdletBinding()]
 	PARAM (
 		[Parameter(Mandatory)]
-		[Alias("Window")]
+		[Alias("Form")]
 		[System.Windows.Window]
-		$Form)
+		$Window)
 	BEGIN
 	{
 		Add-Type –assemblyName PresentationFramework
@@ -123,7 +129,7 @@ function Show-WPFForm
 	}
 	PROCESS
 	{
-		$Form.ShowDialog() | out-null
+		$Window.ShowDialog() | out-null
 	}
 }
 
@@ -144,7 +150,7 @@ $Reader= New-Object -TypeName System.Xml.XmlNodeReader -ArgumentList ([xml]$xaml
 $Global:Window=[Windows.Markup.XamlReader]::Load( $reader )
 
 # Find and Generate Variables for each Controls
-Set-WPFFormVariable -Form $Window -XAML $Xaml -Prefix WPF
+Set-WPFWindowVariable -Window $Window -XAML $Xaml -Prefix WPF
 
 # Find the Variable of this environment
 #Get-Variable WPF*
@@ -172,7 +178,7 @@ Set-WPFFormVariable -Form $Window -XAML $Xaml -Prefix WPF
 ####>
 
 # Show the Window
-Show-WPFForm -Form $Window
+Show-WPFWindow -Window $Window
 
 
 <###
