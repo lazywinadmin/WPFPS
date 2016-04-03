@@ -2,17 +2,17 @@
 
 # GUI (Can be generated with tools such as Visual Studio)
 $Xaml = @"
-<Window x:Class="WpfApplication4.MainWindow"
+<Window x:Class="WpfApplication7.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApplication4"
+        xmlns:local="clr-namespace:WpfApplication7"
         mc:Ignorable="d"
-        Title="WPFPS - Combobox" Height="78.894" Width="278.279">
+        Title="WPFPS" Height="350" Width="525">
     <Grid>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="162"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,5,0,0"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="279" Width="497"/>
 
     </Grid>
 </Window>
@@ -163,8 +163,11 @@ Set-WPFWindowVariable -Window $Window -XAML $Xaml -Prefix WPF
 ####>
 
 # Examples:
-#$Button.Add_Click({})
-#$Window.Add_Loaded({gps|ogv})
+$WPFbutton.Add_Click({
+    
+    #CODE GOES HERE
+})
+
 
 #  find other possible events
 #$Window|gm -MemberType method -force|ogv
