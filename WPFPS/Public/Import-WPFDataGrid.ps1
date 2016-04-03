@@ -2,23 +2,17 @@
 {
 	<#
 	.SYNOPSIS
-		This functions helps you load items into a DataGrid.
+		Function to load multiple items into a DataGrid control.
 
 	.DESCRIPTION
-		Use this function to dynamically load items into the DataGrid control.
-
-        The object passed to the the Item parameter will be converted to a DataTable Object
-
-        The object added into the DataGrid will be a DataView
+		Function to load multiple items into a DataGrid control.
+        The object that you are passing to the Item parameter will be converted to a Datatable object
 
 	.PARAMETER  DataGrid
-		The ComboBox control you want to add items to.
+		Specifies the DataGrid Control
 
 	.PARAMETER  Item
-		The object or objects you wish to load into the ComboBox's items collection.
-	
-	.PARAMETER  DataMember
-		Sets the name of the list or table in the data source for which the DataGrid is displaying data.
+		Specifies the object(s) you wish to load into the ComboBox's items collection.
 	
 	.EXAMPLE
 		Import-WFDataGrid -DataGrid $DataGrid1 -Item (Get-Process)
@@ -28,7 +22,6 @@
 		www.lazywinadmin.com
 		@lazywinadm
 		github.com/lazywinadmin
-		
 	#>
 	
 	Param (

@@ -1,4 +1,4 @@
-﻿function Remove-WPFDataGridRow
+﻿function Remove-WPFDataGridItem
 {
 <#
 	.SYNOPSIS
@@ -14,7 +14,7 @@
         Specifies that the selectedItems will be removed
 	
 	.EXAMPLE
-		Remove-WFDataGridRow -DataGrid $datagrid1 -selectedItems
+		Remove-WFDataGridItem -DataGrid $datagrid1 -selectedItems
 	
 		Remove all selected items
 	

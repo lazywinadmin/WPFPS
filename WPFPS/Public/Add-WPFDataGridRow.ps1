@@ -10,7 +10,7 @@
         By default it will add an empty row (if -values is not specified)
 	
 	.PARAMETER DataGrid
-		Specifies the DataGridView Control to use
+		Specifies the DataGrid Control to use
 	
 	.PARAMETER Values
 		Specities the values to add

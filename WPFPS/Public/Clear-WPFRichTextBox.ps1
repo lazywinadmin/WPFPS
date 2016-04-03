@@ -5,13 +5,13 @@ function Clear-WPFRichTextBox
 		This function will clear the content of a richtextbox control
 	
 	.DESCRIPTION
-		A detailed description of the Clear-WFRichTextBox function.
+		This function will clear the content of a richtextbox control
 	
 	.PARAMETER RichTextBox
-		A description of the RichTextBox parameter.
+		Specifies the RichTextBox control
 	
 	.EXAMPLE
-		Clear-WPFRichTextBox -RichTextBox $RichTextBox
+		Clear-WPFRichTextBox -RichTextBox $RichTextBox1
 	
 	.NOTES
 		Francois-Xavier Cat
