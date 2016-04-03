@@ -61,6 +61,7 @@ You would most likely copy the functions you need inside your GUI project
 * Set-WPFTextBoxText
 * Show-WPFForm
 * Update-WPFDataGrid
+
 # Examples
 
 # Resources
