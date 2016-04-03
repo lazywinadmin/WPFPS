@@ -1,5 +1,30 @@
 ﻿Function Set-WPFFormVariable
 {
+<#
+	.SYNOPSIS
+		Function to generate the Control Variables
+	
+	.DESCRIPTION
+		Function to generate the Control Variables
+	
+	.PARAMETER Form
+		Specifies the Form
+	
+	.PARAMETER XAML
+		Specifies the XAML used
+	
+	.PARAMETER Prefix
+		Specifies the Prefix of each Variable, default is WPF
+	
+	.EXAMPLE
+		PS C:\> Set-WPFFormVariable -Form $Window -XAML $XAML -Prefix 'WPF'
+	
+	.NOTES
+		Francois-Xavier Cat
+		lazywinadmin.com
+		@lazywinadm
+		github.com/lazywinadmin
+#>
 	[CmdletBinding()]
 	PARAM (
 		[parameter(Mandatory)]
@@ -9,7 +34,7 @@
 		[parameter(Mandatory)]
 		[XML]$XAML,
 		
-		$Prefix="WPF")
+		$Prefix = "WPF")
 	
 	BEGIN
 	{
