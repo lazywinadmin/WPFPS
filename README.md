@@ -43,8 +43,6 @@ You would most likely copy the functions you need inside your GUI project
 * Disable-WPFTextBox
 * Enable-WPFButton
 * Enable-WPFTextBox
-* Get-WPFControlEvent
-* Get-WPFControlProperty
 * Get-WPFListBoxItem
 * Get-WPFTextBoxText
 * Import-WPFDataGrid
@@ -55,11 +53,11 @@ You would most likely copy the functions you need inside your GUI project
 * New-WPFSpeakerBeep
 * Remove-WPFComboBoxItem
 * Remove-WPFListBoxItem
-* Set-WPFForm
-* Set-WPFFormVariable
 * Set-WPFListBox
 * Set-WPFTextBoxText
-* Show-WPFForm
+* Set-WPFWindow
+* Set-WPFWindowVariable
+* Show-WPFWindow
 * Update-WPFDataGrid
 
 # Examples
