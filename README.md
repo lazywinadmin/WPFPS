@@ -41,3 +41,4 @@ You would most likely copy the functions you need inside your GUI project
 * [WPF Samples(Microsoft's github repo)](https://github.com/Microsoft/WPF-Samples/)
 * [WPFTutorials.net](http://www.wpftutorial.net/)
 * [WPF-Tutorial.com](http://www.wpf-tutorial.com/)
+* [Code Project - WPF Controls](http://www.codeproject.com/KB/WPF/#Controls)
