@@ -62,6 +62,8 @@ You would most likely copy the functions you need inside your GUI project
 
 # Examples
 
+[Some example here](https://github.com/lazywinadmin/WPFPS/tree/master/Examples)
+
 # Resources
 
 * [WPF Samples(Microsoft's github repo)](https://github.com/Microsoft/WPF-Samples/)
