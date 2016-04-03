@@ -40,7 +40,9 @@
 	)
 	BEGIN
 	{
-		#Add-Type -AssemblyName System.Windows.Controls
+		Add-Type –assemblyName PresentationFramework
+		Add-Type –assemblyName PresentationCore
+		Add-Type –assemblyName WindowsBase
 	}
 	PROCESS
 	{
