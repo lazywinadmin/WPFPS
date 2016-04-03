@@ -33,7 +33,34 @@ Get-Help Get-WPFForm
 You would most likely copy the functions you need inside your GUI project
 
 # Cmdlets
-
+* Add-WPFComboBoxItem
+* Add-WPFDataGridRow
+* Add-WPFListBoxItem
+* Clear-WPFDataGrid
+* Clear-WPFListBox
+* Clear-WPFRichTextBox
+* Disable-WPFButton
+* Disable-WPFTextBox
+* Enable-WPFButton
+* Enable-WPFTextBox
+* Get-WPFControlEvent
+* Get-WPFControlProperty
+* Get-WPFListBoxItem
+* Get-WPFTextBoxText
+* Import-WPFDataGrid
+* New-WPFInputBox
+* New-WPFMessageBox
+* New-WPFOpenFileDialog
+* New-WPFOpenFolderDialog
+* New-WPFSpeakerBeep
+* Remove-WPFComboBoxItem
+* Remove-WPFListBoxItem
+* Set-WPFForm
+* Set-WPFFormVariable
+* Set-WPFListBox
+* Set-WPFTextBoxText
+* Show-WPFForm
+* Update-WPFDataGrid
 # Examples
 
 # Resources
