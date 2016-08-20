@@ -48,8 +48,6 @@ Would love contributors, suggestions, feedback, and other help! Feel free to ope
 ![Alt text](/Examples/WPFListBox01/WPFListBox01.jpg "ListBox Example")
 
 # Resources
-
->>>>>>> 0a4821de37b18ed1387ab627d4809b85037b8b50
 * [WPF Samples(Microsoft's github repo)](https://github.com/Microsoft/WPF-Samples/)
 * [WPFTutorials.net](http://www.wpftutorial.net/)
 * [WPF-Tutorial.com](http://www.wpf-tutorial.com/)
