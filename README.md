@@ -45,7 +45,6 @@ Would love contributors, suggestions, feedback, and other help! Feel free to ope
 
 
 ## More Information
-=======
 ![Alt text](/Examples/WPFListBox01/WPFListBox01.jpg "ListBox Example")
 
 
