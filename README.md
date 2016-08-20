@@ -1,6 +1,6 @@
 # WPFPS
 
-The WPFPS powershell module allows you to interact with Windows Presentation Foundation (or WPF) controls.
+The WPFPS powershell module allows you to interact with Windows Presentation Foundation (WPF) controls.
 
 If you are among those creating complexe/advanced PowerShell Graphical User Interface, you will realize the need for functions to interact with the different Controls.
 
@@ -8,7 +8,9 @@ If your need is only to create simple GUI, without too many controls you might w
 
 ## Installation
 #### Download from PowerShell Gallery
-Coming soon...
+```powershell
+Install-Module -Name WPFPS
+```
 #### Download from GitHub repository
 
 * Download the repository
@@ -30,47 +32,28 @@ Get-Command -Module WPFPS
 Get-Help Get-WPFForm
 ```
 
-You would most likely copy the functions you need inside your GUI project
+## Help !!
+Would love contributors, suggestions, feedback, and other help! Feel free to open an Issue
 
-# Cmdlets
-* Add-WPFComboBoxItem
-* Add-WPFDataGridRow
-* Add-WPFListBoxItem
-* Clear-WPFDataGrid
-* Clear-WPFListBox
-* Clear-WPFRichTextBox
-* Disable-WPFButton
-* Disable-WPFTextBox
-* Enable-WPFButton
-* Enable-WPFTextBox
-* Get-WPFListBoxItem
-* Get-WPFTextBoxText
-* Import-WPFDataGrid
-* New-WPFInputBox
-* New-WPFMessageBox
-* New-WPFOpenFileDialog
-* New-WPFOpenFolderDialog
-* New-WPFSpeakerBeep
-* Remove-WPFComboBoxItem
-* Remove-WPFListBoxItem
-* Set-WPFListBox
-* Set-WPFTextBoxText
-* Set-WPFWindow
-* Set-WPFWindowVariable
-* Show-WPFWindow
-* Update-WPFDataGrid
 
-# Examples
+## Examples
 
 [Some example here](https://github.com/lazywinadmin/WPFPS/tree/master/Examples)
 
 ![Alt text](/Examples/WPFDataGrid02/WPFDataGrid02.jpg?raw=true "DataGrid Example")
 
+<<<<<<< HEAD
+## More Information
+=======
 ![Alt text](/Examples/WPFListBox01/WPFListBox01.jpg "ListBox Example")
 
 # Resources
 
+>>>>>>> 0a4821de37b18ed1387ab627d4809b85037b8b50
 * [WPF Samples(Microsoft's github repo)](https://github.com/Microsoft/WPF-Samples/)
 * [WPFTutorials.net](http://www.wpftutorial.net/)
 * [WPF-Tutorial.com](http://www.wpf-tutorial.com/)
 * [Code Project - WPF Controls](http://www.codeproject.com/KB/WPF/#Controls)
+
+## Notes
+
