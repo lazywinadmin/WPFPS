@@ -55,4 +55,5 @@ Would love contributors, suggestions, feedback, and other help! Feel free to ope
 * [Code Project - WPF Controls](http://www.codeproject.com/KB/WPF/#Controls)
 
 ## Notes
+* Credit to Chad Miller for Out-Datatable private function
 
