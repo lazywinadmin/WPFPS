@@ -6,6 +6,7 @@ If you are among those creating complexe/advanced PowerShell Graphical User Inte
 
 If your need is only to create simple GUI, without too many controls you might want to take a look at [ShowUI](https://showui.codeplex.com/).
 
+
 ## Installation
 #### Download from PowerShell Gallery
 ```powershell
@@ -42,12 +43,13 @@ Would love contributors, suggestions, feedback, and other help! Feel free to ope
 
 ![Alt text](/Examples/WPFDataGrid02/WPFDataGrid02.jpg?raw=true "DataGrid Example")
 
-<<<<<<< HEAD
+
 ## More Information
 =======
 ![Alt text](/Examples/WPFListBox01/WPFListBox01.jpg "ListBox Example")
 
-# Resources
+
+## Resources
 * [WPF Samples(Microsoft's github repo)](https://github.com/Microsoft/WPF-Samples/)
 * [WPFTutorials.net](http://www.wpftutorial.net/)
 * [WPF-Tutorial.com](http://www.wpf-tutorial.com/)
