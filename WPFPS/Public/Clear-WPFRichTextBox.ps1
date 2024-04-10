@@ -30,9 +30,9 @@ function Clear-WPFRichTextBox
 	
 	BEGIN
 	{
-		Add-Type –assemblyName PresentationFramework
-		Add-Type –assemblyName PresentationCore
-		Add-Type –assemblyName WindowsBase
+		Add-Type -assemblyName PresentationFramework
+		Add-Type -assemblyName PresentationCore
+		Add-Type -assemblyName WindowsBase
 	}
 	PROCESS
 	{
